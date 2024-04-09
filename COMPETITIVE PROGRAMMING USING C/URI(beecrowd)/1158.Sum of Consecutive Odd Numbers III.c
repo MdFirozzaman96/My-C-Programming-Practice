@@ -1,0 +1,43 @@
+#include<stdio.h>
+int main()
+{
+    int t,x,y,i,k=0,sum=0;
+    scanf("%d",&t);
+    for(i=0;i<t;i++)
+    {
+        scanf("%d%d",&x,&y);
+        if(x%2==1)
+        {
+            while(k!=y)
+            {
+                sum=sum+x;
+                x+=2;
+                k++;
+            }
+            printf("%d\n",sum);
+            k=0;
+        }
+        else
+        {
+            while(k!=y)
+            {
+                if(k==0)
+                {
+                    x+=1;
+                    sum=sum+x;
+                    k++;
+                }
+                else
+                {
+                    x+=2;
+                    sum=sum+x;
+                    k++;
+                }
+            }
+            printf("%d\n",sum);
+            k=0;
+        }
+        sum=0;
+    }
+    return 0;
+}

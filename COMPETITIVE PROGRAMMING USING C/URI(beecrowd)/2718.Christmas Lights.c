@@ -1,0 +1,40 @@
+#include<stdio.h>
+int main()
+{
+    int i,t,x,bi,seq=0,seq1=0;
+    scanf("%d",&t);
+    for(i=0;i<t;i++)
+    {
+        scanf("%d",&x);
+        while(x!=0)
+        {
+            bi=x%2;
+            x/=2;
+            if(bi==1)
+            {
+                seq+=1;
+            }
+            else
+            {
+                /*if(seq1<seq)
+                {
+                    seq1=seq;
+                    seq=0;
+                }*/
+                x=0;
+            }
+        }
+        /*if(seq1>=seq)
+        {
+            printf("%d\n",seq1);
+        }
+        else
+        {
+            printf("%d\n",seq);
+        }*/
+        printf("%d\n",seq);
+        seq=0;
+        //seq1=0;
+    }
+    return 0;
+}
